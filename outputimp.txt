@@ -1,0 +1,121 @@
+Is CT >= 3.0?
+Label: True: Branch
+  Is SECSize >= 3.0?
+  Label: True: Branch
+    Is UCSize >= 3.0?
+    Label: True: Branch
+      Is CT >= 5.0?
+      Label: True: Branch
+        Is UCShape >= 2.0?
+        Label: True: Branch
+          Is BC >= 3.0?
+          Label: True: Branch
+            Predict-- {4.0: 104}
+          Label: False:
+            Is BC >= 2.0?
+            Label: True: Branch
+              Is BN >= 7.0?
+              Label: True: Branch
+                Predict-- {4.0: 3}
+              Label: False:
+                Predict-- {2.0: 1}
+            Label: False:
+              Predict-- {4.0: 14}
+        Label: False:
+          Is BC >= 7.0?
+          Label: True: Branch
+            Predict-- {2.0: 1}
+          Label: False:
+            Predict-- {4.0: 3}
+      Label: False:
+        Is ID >= 7.0?
+        Label: True: Branch
+          Is BN >= 7.0?
+          Label: True: Branch
+            Is NN >= 2.0?
+            Label: True: Branch
+              Is NN >= 3.0?
+              Label: True: Branch
+                Predict-- {4.0: 1}
+              Label: False:
+                Predict-- {2.0: 1}
+            Label: False:
+              Predict-- {4.0: 5}
+          Label: False:
+            Predict-- {4.0: 20}
+        Label: False:
+          Is ID >= 6.0?
+          Label: True: Branch
+            Predict-- {2.0: 1}
+          Label: False:
+            Is SECSize >= 7.0?
+            Label: True: Branch
+              Is BN >= 4.0?
+              Label: True: Branch
+                Predict-- {4.0: 11}
+              Label: False:
+                Is BC >= 2.0?
+                Label: True: Branch
+                  Predict-- {2.0: 1}
+                Label: False:
+                  Predict-- {4.0: 1}
+            Label: False:
+              Is MA >= 4.0?
+              Label: True: Branch
+                Predict-- {2.0: 3}
+              Label: False:
+                Predict-- {4.0: 3}
+    Label: False:
+      Is BN >= 4.0?
+      Label: True: Branch
+        Predict-- {4.0: 2}
+      Label: False:
+        Predict-- {2.0: 2}
+  Label: False:
+    Is CT >= 7.0?
+    Label: True: Branch
+      Predict-- {4.0: 13}
+    Label: False:
+      Is MA >= 4.0?
+      Label: True: Branch
+        Is SECSize >= 1.0?
+        Label: True: Branch
+          Is UCShape >= 4.0?
+          Label: True: Branch
+            Predict-- {4.0: 4}
+          Label: False:
+            Is BC >= 9.0?
+            Label: True: Branch
+              Predict-- {4.0: 1}
+            Label: False:
+              Predict-- {2.0: 2}
+        Label: False:
+          Predict-- {2.0: 2}
+      Label: False:
+        Predict-- {2.0: 20}
+Label: False:
+  Is BC >= 4.0?
+  Label: True: Branch
+    Is SECSize >= 5.0?
+    Label: True: Branch
+      Predict-- {4.0: 5}
+    Label: False:
+      Predict-- {2.0: 1}
+  Label: False:
+    Is MA >= 6.0?
+    Label: True: Branch
+      Is BN >= 5.0?
+      Label: True: Branch
+        Predict-- {4.0: 2}
+      Label: False:
+        Predict-- {2.0: 1}
+    Label: False:
+      Is SECSize >= 5.0?
+      Label: True: Branch
+        Is MA >= 2.0?
+        Label: True: Branch
+          Predict-- {2.0: 8}
+        Label: False:
+          Predict-- {4.0: 1}
+      Label: False:
+        Predict-- {2.0: 322}
